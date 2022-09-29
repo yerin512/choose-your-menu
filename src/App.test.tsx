@@ -1,9 +1,9 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen } from '@testing-library/react'
+import App from './App'
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/메뉴 고르기/);
-  expect(linkElement).toBeInTheDocument();
-});
+describe('<App/>', () => {
+  render(<App />)
+  it('처음 화면이 보임', () => {
+    expect(screen.getByText(/메뉴 고르기/)).toBeInTheDocument()
+  })
+})
